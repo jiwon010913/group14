@@ -141,7 +141,13 @@ while not done: #done이 False를 유지하는 동안 계속 실행, not False =
                 print("버튼a 누름")
                 ds = 0
 
-
+    hero.estimateCenter()
+    enermy.estimateCenter()
+    if hero.isCollide(enermy):
+        print("적과 충돌함")
+        hero.decreaseVitality(0.5)
+    
+    
     if bullet.y < 0:
         bulletFire = False
 
